@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Frontend Mentor | E-commerce product page</title>
+  </head>
+  <body>
+    <div id="carouselOverlay" class="carousel-overlay" hidden></div>
+    <!-- =========================
+         Header
+         ========================= -->
+    <header>
+      <nav class="navBar" role="navigation" aria-label="Main navigation">
+        <button
+          id="menuButton"
+          class="menu-button"
+          aria-label="Open navigation menu"
+        >
+          <img
+            class="menu-icon"
+            src="./images/icon-menu.svg"
+            alt="Open navigation menu"
+          />
+        </button>
+        <img class="logo" src="./images/logo.svg" alt="Sneaker Company logo" />
+        <div id="menuContainer" class="menu-container" aria-hidden="true">
+          <button
+            id="closeButton"
+            class="close-button"
+            aria-label="Close navigation menu"
+          >
+            <img
+              class="close-icon"
+              src="./images/icon-close.svg"
+              alt="Close navigation menu"
+            />
+          </button>
+          <ul class="menu" role="menu">
+            <li><a href="#">Collections</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="right-sight-of-the-header">
+        <button
+          class="cart-button"
+          aria-label="Cart with 3 items"
+          type="button"
+        >
+          <img
+            class="cart-icon"
+            src="./images/icon-cart.svg"
+            alt="Shopping cart"
+          />
+          <span class="cart-items-quantity" aria-live="polite">3</span>
+        </button>
+        <aside class="cart-items" aria-label="Cart">
+          <h2 class="cart-header">Cart</h2>
+          <hr />
+          <span class="cart-empty">Your cart is empty.</span>
+          <div class="cart-item" aria-live="polite">
+            <div class="cart-item-details" role="listitem">
+              <img
+                class="cart-item-image"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="Fall Limited Edition Sneakers thumbnail"
+              />
+              <div class="cart-item-text-container">
+                <span class="cart-item-title"
+                  >Fall Limited Edition Sneakers</span
+                >
+                <span
+                  >$125.00 x <span>3</span>
+                  <span class="cart-item-total-price">$375.00</span></span
+                >
+              </div>
+              <button
+                class="remove-item-button"
+                aria-label="Remove item from cart"
+              >
+                <img
+                  src="./images/icon-delete.svg"
+                  alt="Remove item from cart"
+                />
+              </button>
+            </div>
+            <button class="checkout-button" aria-label="Checkout item">
+              Checkout
+            </button>
+          </div>
+        </aside>
+        <img class="avatar" src="./images/image-avatar.png" alt="User avatar" />
+      </div>
+    </header>
+    <hr class="hr-fullwidth" />
+
+    <!-- =========================
+         Main Section
+         ========================= -->
+    <main role="main">
+      <div class="main-product-screen-desktop">
+        <button id="mainProductImageButton" class="main-product-image-button">
+          <img
+            class="main-product-image"
+            src="./images/image-product-1.jpg"
+            alt="Fall Limited Edition Sneakers, main view"
+          />
+        </button>
+        <div class="thumbnails-container">
+          <button class="thumbnails-button">
+            <img
+              class="thumbnails selected"
+              src="./images/image-product-1-thumbnail.jpg"
+              data-full-image="./images/image-product-1.jpg"
+              alt="Sneakers thumbnail 1"
+            />
+          </button>
+          <button class="thumbnails-button">
+            <img
+              class="thumbnails"
+              src="./images/image-product-2-thumbnail.jpg"
+              data-full-image="./images/image-product-2.jpg"
+              alt="Sneakers thumbnail 2"
+            />
+          </button>
+          <button class="thumbnails-button">
+            <img
+              class="thumbnails"
+              src="./images/image-product-3-thumbnail.jpg"
+              data-full-image="./images/image-product-3.jpg"
+              alt="Sneakers thumbnail 3"
+            />
+          </button>
+          <button class="thumbnails-button">
+            <img
+              class="thumbnails"
+              src="./images/image-product-4-thumbnail.jpg"
+              data-full-image="./images/image-product-4.jpg"
+              alt="Sneakers thumbnail 4"
+            />
+          </button>
+        </div>
+      </div>
+      <!-- =========================
+     Carousel Section
+     ========================= -->
+      <div id="carousel" class="carousel slide">
+        <button id="carouselCloseButton" class="carousel-close-button">
+          <img
+            class="close-icon-white"
+            src="./images/icon-close-white.png"
+            alt=""
+          />
+        </button>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./images/image-product-1.jpg"
+              class="d-block w-100"
+              alt="Sneakers, main view"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image-product-2.jpg"
+              class="d-block w-100"
+              alt="Sneakers, main view"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image-product-3.jpg"
+              class="d-block w-100"
+              alt="Sneakers, main view"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/image-product-4.jpg"
+              class="d-block w-100"
+              alt="Sneakers, main view"
+            />
+          </div>
+        </div>
+
+        <!-- =========================
+       Carousel Indicators
+       ========================= -->
+
+        <div class="carousel-indicators">
+          <button
+            class="thumbnails-button"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          >
+            <img
+              class="thumbnails"
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="Sneakers thumbnail 1"
+            />
+          </button>
+          <button
+            class="thumbnails-button"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          >
+            <img
+              class="thumbnails"
+              src="./images/image-product-2-thumbnail.jpg"
+              alt="Sneakers thumbnail 2"
+            />
+          </button>
+          <button
+            class="thumbnails-button"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          >
+            <img
+              class="thumbnails"
+              src="./images/image-product-3-thumbnail.jpg"
+              alt="Sneakers thumbnail 3"
+            />
+          </button>
+          <button
+            class="thumbnails-button"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          >
+            <img
+              class="thumbnails"
+              src="./images/image-product-4-thumbnail.jpg"
+              alt="Sneakers thumbnail 4"
+            />
+          </button>
+        </div>
+
+        <!-- =========================
+       Carousel Controls
+       ========================= -->
+        <div class="carousel-controls">
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="prev"
+            aria-label="Previous slide"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <img src="./images/icon-previous.svg" alt="Previous slide" />
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carousel"
+            data-bs-slide="next"
+            aria-label="Next slide"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <img src="./images/icon-next.svg" alt="Next slide" />
+          </button>
+        </div>
+      </div>
+
+      <!-- =========================
+     Product Details Section
+     ========================= -->
+      <section class="product-details">
+        <div class="product-info">
+          <span class="company-title">Sneaker Company</span>
+          <h1 class="product-title">Fall Limited Edition Sneakers</h1>
+          <p class="product-description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </div>
+        <div class="price-section">
+          <div class="price-and-discount">
+            <span class="price">$125.00</span>
+            <span class="discount">50%</span>
+          </div>
+          <span class="original-price">$250.00</span>
+        </div>
+        <div class="quantity-and-add-to-cart">
+          <!-- =========================
+         Quantity Selector
+         ========================= -->
+          <div
+            class="quantity-selector"
+            role="group"
+            aria-label="Quantity selector"
+          >
+            <button
+              id="minusButton"
+              class="minus"
+              aria-label="Decrease quantity"
+            >
+              <img src="./images/icon-minus.svg" alt="Decrease quantity" />
+            </button>
+            <span id="quantityNumber" class="quantity-number" aria-live="polite"
+              >1</span
+            >
+            <button id="plusButton" class="plus" aria-label="Increase quantity">
+              <img src="./images/icon-plus.svg" alt="Increase quantity" />
+            </button>
+          </div>
+          <!-- =========================
+         Add to Cart Button
+         ========================= -->
+          <button class="add-to-cart-button" aria-label="Add to cart">
+            <img src="./images/icon-cart-btn.png" alt="Add to cart" />
+            Add to cart
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
